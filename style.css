@@ -1,8 +1,8 @@
 
 :root{
-    --green:#b2d4c0;
-    --black:#192a56;
-    --light-color:#666;
+    --green:#6b9b7f;
+    --black:#11192f;
+    --light-color:#5e5e5e;
     --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
 
 }
@@ -23,6 +23,29 @@ html{
     scroll-padding-top: 5.5rem;
     scroll-behavior: smooth;
 }
+
+section{
+    padding:2rem 9%;
+}
+
+section:nth-child(even){
+    background: #eee;
+}
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color:#fff;
+    background:var(--black);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding:.8rem 3rem;
+}
+.btn:hover{
+    background: var(--green);
+    letter-spacing: .1rem;
+}
+
 
 header{
     position: fixed;
@@ -125,14 +148,41 @@ header .icons #menu-bars{
     font-size: 5rem;
 }
 
+.home .home-slider .slide{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:2rem;
+    padding-top: 9rem;;
+}
 
+.home .home-slider .slide .content{
+    flex:1 1 45rem;
+}
+.home .home-slider .slide .image{
+    flex:1 1 45rem;
+}
+.home .home-slider .slide .image img{
+    width: 100%;
+}
+.home .home-slider .slide .content span{
+    color:var(--green);
+    font-size:2.5rem; 
+}
+.home .home-slider .slide .content h3{
+    color:var(--black);
+    font-size: 7rem; 
+}
+.home .home-slider .slide .content p{
+    color:var(--light-color);
+    font-size:2.2rem;
+    padding:.5rem 0; 
+    line-height: 1.5;
+}
 
-
-
-
-
-
-
+.swiper-pagination-bullet-active{
+    background:var(--green);
+}
 
 
 
@@ -162,6 +212,9 @@ header .icons #menu-bars{
 
     header{
         padding:1rem 2rem;
+    }
+    section{
+        padding:2rem;
     }
 }
 
@@ -195,6 +248,9 @@ header .icons #menu-bars{
     #search-form #search-box{
         width:90%;
         margin:0 1rem;
+    }
+    .home .home-slider .slide .content h3{
+        font-size: 5rem; 
     }
 }
 @media (max-width:991px){
