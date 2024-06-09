@@ -470,6 +470,36 @@ header .icons #menu-bars{
 .order form .btn{
     margin-top: 0;
 }
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+}
+.footer .box-container .box h3{
+    padding:.5rem 0;
+    font-size: 2.5rem;
+    color:var(--black);
+}
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    color:var(--light-color);
+}
+
+.footer .box-container .box a:hover{
+    color: var(--green);
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
