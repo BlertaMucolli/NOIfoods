@@ -81,5 +81,30 @@ var swiper = new Swiper(".home-slider", {
  }
  window.onload = fadeOut;
  
+ document.addEventListener("DOMContentLoaded", function() {
+    const img = document.querySelector('.rotatable');
+    const audio = document.getElementById('rotate-sound');
+    const infoText = document.querySelector('.info-text');
+    let isRotating = false;
+
+    img.addEventListener('click', function() {
+        if (isRotating) {
+            // Stop rotation
+            img.classList.remove('rotating');
+            audio.pause();
+        } else {
+            // Start rotation
+            img.classList.add('rotating');
+            audio.currentTime = 0; // Rewind the audio to the start
+            audio.play();
+        }
+        isRotating = !isRotating;
+
+        // Optionally hide the info text on interaction
+        if (infoText.style.display !== 'none') {
+            infoText.style.display = 'none';
+        }
+    });
+});
 
   
