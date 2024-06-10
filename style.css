@@ -276,6 +276,7 @@ header .icons #menu-bars{
 }
 .about .row .image img{
     width:115%;
+    transition: transform 2s linear;
 }
 .about .row .content{
     flex:1 1 45rem;
@@ -317,7 +318,18 @@ header .icons #menu-bars{
     font-size: 1.5rem;
     color: var(--black);
 }
+@keyframes rotateInfinite {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 
+.rotating {
+    animation: rotateInfinite 2s linear infinite;
+}
 .menu .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
