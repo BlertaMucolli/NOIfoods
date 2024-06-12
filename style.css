@@ -1,8 +1,8 @@
 
 :root{
-    --green:#6b9b7f;
-    --black:#11192f;
-    --light-color:#5e5e5e;
+    --green:#4a6f57;
+    --black:#000000;
+    --light-color:#3e3d3d;
     --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
 
 }
@@ -64,7 +64,7 @@ section:nth-child(even){
 header{
     position: fixed;
     top: 0; left: 0; right: 0;
-    background: #e1ba94;
+    background: #ebaa70;
     padding: 1rem 7%;
     display: flex;
     align-items: center;
@@ -110,6 +110,24 @@ header .icons a:hover{
 header .icons #menu-bars{
     display: none;
 }
+/* Background animation */
+@keyframes moveBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -200% 0; /* Adjust for desired movement */
+    }
+}
+
+/* Apply the animation to the home section */
+.home {
+    background: url('images/logo.png') repeat-x; /* Path to your background image */
+    background-size: cover; /* Adjust size as needed */
+    animation: moveBackground 20s linear infinite; /* Adjust duration as needed */
+    background-attachment: fixed; /* Optional: to create a parallax effect */
+}
+
 
 #search-form{
     position: fixed;
@@ -287,7 +305,7 @@ header .icons #menu-bars{
     padding:5rem 0;   
 }
 .about .row .content p{
-    color: var(--light-color);
+    color: var(--black);
     font-size: 1.5rem;
     padding:2rem 0;
     line-height: 2;
